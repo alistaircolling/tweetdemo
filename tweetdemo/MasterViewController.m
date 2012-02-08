@@ -40,10 +40,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSMutableArray *ar = [xmlcont tweets];
+	// NSMutableArray *ar = [xmlcont tweets];
     // Return the number of rows in the section.
-    NSInteger tot = [ar count];
-    return 0;
+    //NSInteger tot = [ar count];
+    //return 0;
+	
+	return [[xmlcont tweets] count];
+			
 }
 
 // Customize the appearance of table view cells.
