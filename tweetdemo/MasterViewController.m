@@ -43,7 +43,7 @@
     NSMutableArray *ar = [xmlcont tweets];
     // Return the number of rows in the section.
     NSInteger tot = [ar count];
-    return tot;
+    return 0;
 }
 
 // Customize the appearance of table view cells.
