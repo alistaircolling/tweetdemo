@@ -22,6 +22,8 @@
 		82C1162514E30EFC00709C13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C1160014E30EF900709C13 /* Foundation.framework */; };
 		82C1162D14E30EFC00709C13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82C1162B14E30EFC00709C13 /* InfoPlist.strings */; };
 		82C1163014E30EFC00709C13 /* tweetdemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C1162F14E30EFC00709C13 /* tweetdemoTests.m */; };
+		82C1163B14E30F5100709C13 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C1163A14E30F5100709C13 /* Tweet.m */; };
+		82C1163E14E3106800709C13 /* XMLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C1163D14E3106800709C13 /* XMLController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,24 +41,28 @@
 		82C115FE14E30EF900709C13 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		82C1160014E30EF900709C13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82C1160214E30EF900709C13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		82C1160614E30EF900709C13 /* tweetdemo-Info.plist */ = {isa = PBXFileReference; path = "tweetdemo-Info.plist"; sourceTree = "<group>"; };
+		82C1160614E30EF900709C13 /* tweetdemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tweetdemo-Info.plist"; sourceTree = "<group>"; };
 		82C1160814E30EF900709C13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82C1160A14E30EF900709C13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		82C1160C14E30EF900709C13 /* tweetdemo-Prefix.pch */ = {isa = PBXFileReference; path = "tweetdemo-Prefix.pch"; sourceTree = "<group>"; };
-		82C1160D14E30EF900709C13 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		82C1160C14E30EF900709C13 /* tweetdemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tweetdemo-Prefix.pch"; sourceTree = "<group>"; };
+		82C1160D14E30EF900709C13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		82C1160E14E30EF900709C13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		82C1161114E30EF900709C13 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		82C1161414E30EF900709C13 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		82C1161614E30EF900709C13 /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		82C1161614E30EF900709C13 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		82C1161714E30EFA00709C13 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		82C1161914E30EFA00709C13 /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		82C1161914E30EFA00709C13 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		82C1161A14E30EFB00709C13 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		82C1162114E30EFC00709C13 /* tweetdemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tweetdemoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C1162214E30EFC00709C13 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		82C1162A14E30EFC00709C13 /* tweetdemoTests-Info.plist */ = {isa = PBXFileReference; path = "tweetdemoTests-Info.plist"; sourceTree = "<group>"; };
+		82C1162A14E30EFC00709C13 /* tweetdemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tweetdemoTests-Info.plist"; sourceTree = "<group>"; };
 		82C1162C14E30EFC00709C13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		82C1162E14E30EFC00709C13 /* tweetdemoTests.h */ = {isa = PBXFileReference; path = tweetdemoTests.h; sourceTree = "<group>"; };
+		82C1162E14E30EFC00709C13 /* tweetdemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tweetdemoTests.h; sourceTree = "<group>"; };
 		82C1162F14E30EFC00709C13 /* tweetdemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tweetdemoTests.m; sourceTree = "<group>"; };
+		82C1163914E30F5100709C13 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
+		82C1163A14E30F5100709C13 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
+		82C1163C14E3106800709C13 /* XMLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLController.h; sourceTree = "<group>"; };
+		82C1163D14E3106800709C13 /* XMLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,10 @@
 				82C1161914E30EFA00709C13 /* DetailViewController.h */,
 				82C1161A14E30EFB00709C13 /* DetailViewController.m */,
 				82C1160514E30EF900709C13 /* Supporting Files */,
+				82C1163914E30F5100709C13 /* Tweet.h */,
+				82C1163A14E30F5100709C13 /* Tweet.m */,
+				82C1163C14E3106800709C13 /* XMLController.h */,
+				82C1163D14E3106800709C13 /* XMLController.m */,
 			);
 			path = tweetdemo;
 			sourceTree = "<group>";
@@ -270,6 +280,8 @@
 				82C1160F14E30EF900709C13 /* AppDelegate.m in Sources */,
 				82C1161814E30EFA00709C13 /* MasterViewController.m in Sources */,
 				82C1161B14E30EFB00709C13 /* DetailViewController.m in Sources */,
+				82C1163B14E30F5100709C13 /* Tweet.m in Sources */,
+				82C1163E14E3106800709C13 /* XMLController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +389,7 @@
 		82C1163414E30EFC00709C13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tweetdemo/tweetdemo-Prefix.pch";
 				INFOPLIST_FILE = "tweetdemo/tweetdemo-Info.plist";
@@ -388,6 +401,7 @@
 		82C1163514E30EFC00709C13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tweetdemo/tweetdemo-Prefix.pch";
 				INFOPLIST_FILE = "tweetdemo/tweetdemo-Info.plist";

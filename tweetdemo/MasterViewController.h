@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMLController.h"
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController{
+    
+    XMLController *xmlcont;
+    
+}
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
+@property (strong, nonatomic) XMLController *xmlcont;
 
 @end

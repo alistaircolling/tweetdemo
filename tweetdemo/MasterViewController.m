@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
+#import "Tweet.h"
 
 @implementation MasterViewController
 
@@ -31,8 +32,17 @@
 
 #pragma mark - View lifecycle
 
+
+
 - (void)viewDidLoad
 {
+    
+    xmlcont = [[XMLController alloc] loadXMLByURL:@"http://api.twitter.com/1/statuses/user_timeline/alidrongo.xml"];
+    
+    for (Tweet *t in [xmlcont tweets]) {
+        NSLog(@"at date: %@ you wrote: %@", [t createdAt], [t content]);
+    }
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
