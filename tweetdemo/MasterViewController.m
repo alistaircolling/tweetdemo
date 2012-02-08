@@ -32,6 +32,40 @@
 
 #pragma mark - View lifecycle
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSMutableArray *ar = [xmlcont tweets];
+    // Return the number of rows in the section.
+    NSInteger tot = [ar count];
+    return tot;
+}
+
+// Customize the appearance of table view cells.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"index: %@", indexPath);
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) 
+	{
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+		//cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+	
+	NSMutableArray *cont = [xmlcont tweets];
+    Tweet *current = [cont objectAtIndex:indexPath.row];
+    //return the values not using references
+    cell.detailTextLabel.text = [current createdAt];
+    cell.textLabel.text = [current content];
+    return cell;
+}
 
 
 - (void)viewDidLoad
@@ -43,12 +77,14 @@
         NSLog(@"at date: %@ you wrote: %@", [t createdAt], [t content]);
     }
     
+   [self.tableView reloadData];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+  /*  self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
-    }
+    }*/
 }
 
 - (void)viewDidUnload
